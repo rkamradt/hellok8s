@@ -1,0 +1,14 @@
+{
+  "name": "greetingsk8s",
+  "version": "1.0.0",
+  "description": "Hello World server for deployment to k8s",
+  "author": "Randal Kamradt <randysr@kamradtfamily.net>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1",
+    "request": "^2.88.0"
+  }
+}

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: greetingsk8s-deployment
+  labels:
+    app: greetingsk8s
+spec:
+  selector:
+    matchLabels:
+      app: greetingsk8s
+  template:
+    metadata:
+      labels:
+        app: greetingsk8s
+    spec:
+      containers:
+      - name: greetingsk8s
+        image: docker.io/rlkamradt/greetingsk8s:latest
+        env:
+         - name: HELLO_URL
+           value: "http://hellok8s-service"
+        ports:
+        - containerPort: 8080
