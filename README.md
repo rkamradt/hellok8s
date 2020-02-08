@@ -1,9 +1,16 @@
 # Hello k8s
 
-A simple, containerized NodeJS server suitable for deploying to kubernetes as a test.
+Two simple, containerized NodeJS servers suitable for deploying to kubernetes as a test.
 
-Find the image on docker hub at rlkamradt/hellok8s
+Find the image on docker hub at rlkamradt/hellok8s and rlkamradt/greetingsk8s
 
 To deploy the image:
 
-```kubectl run hellok8s --image=docker.io/rlkamradt/hellok8s:latest```
+```
+cd helloworld
+kubectl apply -f hellok8s-deployment.yaml
+kubectl apply -f hellok8s-service.yaml
+cd ../greetings
+kubectl apply -f greetingsk8s-deployment.yaml
+kubectl apply -f greetingsk8s-service.yaml
+```
