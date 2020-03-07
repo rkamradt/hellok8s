@@ -3,9 +3,8 @@ kind: Pod
 spec:
   containers:
     - name: kaniko
-      image: gcr.io/kaniko-project/executor:v0.16.0
-      command:
-        - /bin/cat
+      image: gcr.io/kaniko-project/executor:debug
+      command: ["/usr/bin/tail", "-f", "/dev/null"]
       imagePullPolicy: Always
       resources:
         requests:
