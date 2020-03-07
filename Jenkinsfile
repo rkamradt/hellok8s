@@ -11,12 +11,12 @@ pipeline {
               }
             }
             steps {
-              sh "/kaniko/executor /
-                    --context=git://github.com/rkamradt/hellok8s.git#refs/heads/master /
-                    --dockerfile=DockerfileHelloworld /
-                    --verbosity=debug /
-                    --cache=true /
-                    --insecure=true /
+              sh "/kaniko/executor \
+                    --context=git://github.com/rkamradt/hellok8s.git#refs/heads/master \
+                    --dockerfile=DockerfileHelloworld \
+                    --verbosity=debug \
+                    --cache=true \
+                    --insecure=true \
                     --destination=registry.container-registry:5000/helloworld:latest"
             }
         }
