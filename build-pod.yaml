@@ -4,7 +4,8 @@ spec:
   containers:
     - name: kaniko
       image: gcr.io/kaniko-project/executor:v0.16.0
-      command: ["tail", "-f", "/dev/null"]
+      command:
+        - cat
       imagePullPolicy: Always
       resources:
         requests:
