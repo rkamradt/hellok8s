@@ -9,7 +9,7 @@ console.log('testing url ' + URL);
 // Main test
 request(URL, (err, res, body) => {
   if (err) { console.log('error: ' + err); process.exit(2); }
-  if(body === 'Hello world\n') {
+  if(body === 'Hello World\n') {
     console.log('exit 0; service returned ' + body);
     process.exit(0);
   }
